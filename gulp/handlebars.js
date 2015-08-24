@@ -12,7 +12,7 @@ var bom = require('gulp-bom');
 gulp.task('handlebars', function () {
     return gulp.src(path.templates)
         .pipe(bom())
-        .pipe(handlebars({wrap: true}))
+        .pipe(handlebars({wrapped: true}))
         .pipe(declare({
             namespace: 't',
             noRedeclare: true,

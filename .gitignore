@@ -2,3 +2,4 @@ node_modules
 devTemp
 build
 npm-debug.log
+tests/templates.js
