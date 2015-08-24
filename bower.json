@@ -1,0 +1,15 @@
+{
+  "name": "Demo2",
+  "version": "1.0.0",
+  "homepage": "https://github.com/scott-yu/demo2",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "marionette": "~2.4.2",
+    "requirejs": "~2.1.20",
+    "requirejs-handlebars": "~0.1.1",
+    "text": "~2.0.14",
+    "handlebars": "~3.0.3",
+    "handlebars.runtime": "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.runtime.js"
+  }
+}

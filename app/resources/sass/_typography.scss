@@ -1,0 +1,19 @@
+h1 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    font-weight: 600;
+}
+
+h1, h2, p {
+    margin-bottom: $margin;
+}
+
+p {
+    line-height: 1.4rem;
+}

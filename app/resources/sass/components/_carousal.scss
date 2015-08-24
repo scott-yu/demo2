@@ -1,0 +1,49 @@
+.carousel {
+    float: left;
+    display: block;
+    margin: 0 $margin $margin 0;
+
+    .main-image{
+        width: 500px + ($margin * 4);
+        img {
+            width: 100%;
+        }
+    }
+
+    .caption {
+        display: block;
+    }
+
+    .navigation {
+        li.navigation-item {
+            float: left;
+            margin-right: $margin;
+            position: relative;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.active:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 3px;
+                left: 0;
+
+                border: 4px solid rgba(0,0,0,.5);
+            }
+
+            a {
+                width: 100px;
+                height: 58px;
+                display: inline-block;
+
+                background-size: 100px auto;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
