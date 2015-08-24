@@ -4,7 +4,7 @@ var paths = require('./paths');
 
 gulp.task('serve', function(done) {
     browserSync({
-        open: false,
+        open: true,
         port: 9000,
         server: {
             baseDir: [paths.devRoot]

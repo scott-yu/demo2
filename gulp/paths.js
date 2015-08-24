@@ -1,14 +1,10 @@
 var appRoot              = 'app/';
 var devRoot              = 'devtemp/';
 var distRoot             = 'build/';
-var testRoot             = 'tests/';
-var unitTestRoot         = testRoot + 'unit/';
 var nodeModuleRoot       = 'node_modules/';
 
 module.exports = {
     root                 : appRoot,
-    testRoot             : testRoot,
-    unitTestRoot         : unitTestRoot,
     devRoot              : devRoot,
     output               : distRoot,
     nodeModuleRoot       : nodeModuleRoot,
@@ -32,8 +28,4 @@ module.exports = {
     templates: [
         appRoot + '**/*.hbs',
     ],
-
-    specs: [
-        testRoot + 'specs/**/*.js'
-    ]
 };

@@ -11,18 +11,6 @@ require('./eslint');
 require('./sass');
 require('./handlebars');
 
-// require('./requirejs.js');
-
-// gulp.task('buildRequireJs', function(callback) {
-//     return runSequence(
-//         'requirejs',
-//         'processFilesForBuild',
-//         'createBuildInfo',
-//         'additionalDeploySteps',
-//         callback
-//         );
-// });
-
 gulp.task('build-assets', function () {
     return gulp.src([paths.root + 'resources/**/*', '!' + paths.root + 'resources/{sass,sass/**}'])
         .pipe(plumber())

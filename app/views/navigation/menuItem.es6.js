@@ -1,4 +1,5 @@
 import Marionette from 'marionette';
+import Backbone from 'backbone';
 import Template from 'hbs!views/navigation/menuItem';
 
 export class navigationMenuItem extends Marionette.ItemView {
@@ -21,10 +22,14 @@ export class navigationMenuItem extends Marionette.ItemView {
     }
 
     onClick(e) {
-        e && e.preventDefault();
+        e.preventDefault();
         this._setActiveClass();
 
         this.trigger('navItemClicked');
+
+        if (this.model.has('route')) {
+            this._navigateRoute(this.model.get('route'));
+        }
     }
 
     onSelect() {
@@ -33,5 +38,9 @@ export class navigationMenuItem extends Marionette.ItemView {
 
     _setActiveClass() {
         this.$el.addClass('active').siblings().removeClass('active');
+    }
+
+    _navigateRoute(route) {
+        Backbone.history.navigate(route, true);
     }
 }

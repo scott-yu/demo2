@@ -1,7 +1,7 @@
 .carousel {
     float: left;
     display: block;
-    margin: 0 $margin $margin 0;
+    margin: 0 20px $margin 0;
 
     .main-image{
         width: 500px + ($margin * 4);
@@ -32,7 +32,7 @@
                 bottom: 3px;
                 left: 0;
 
-                border: 4px solid rgba(0,0,0,.5);
+                border: 4px solid rgba(10,100,163, .5);
             }
 
             a {

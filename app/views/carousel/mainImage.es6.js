@@ -9,4 +9,8 @@ export class MainImage extends Marionette.ItemView {
     className() {
         return 'main-image';
     }
+
+    tagName() {
+        return 'figure';
+    }
 }

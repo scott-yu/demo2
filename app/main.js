@@ -1,4 +1,3 @@
-
 require.config({
     waitSeconds: 7,
     paths: {
@@ -33,6 +32,9 @@ require.config({
 
 define([
     'app'
-], function(App) {
+], function(
+    App) {
+    'use strict';
+
     App.start();
 });

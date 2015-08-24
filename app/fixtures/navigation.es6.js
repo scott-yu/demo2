@@ -17,7 +17,7 @@ const navigationItems = [
     },
     {
         label: 'Business',
-        route: 'buiness'
+        route: 'business'
     },
     {
         label: 'Sports',

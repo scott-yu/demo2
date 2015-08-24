@@ -7,7 +7,7 @@ var path = require('./paths');
 var streamqueue = require('streamqueue');
 var plumber = require('gulp-plumber');
 var paths = require('./paths.js');
-var bom = require('gulp-bom');
+var bom = require('./stripBom');
 
 gulp.task('handlebars', function () {
     return gulp.src(path.templates)
@@ -31,6 +31,5 @@ gulp.task('handlebars', function () {
             exports: 'this["t"]'
         }))
         .pipe(plumber())
-        .pipe(gulp.dest(paths.devRoot))
-        .pipe(gulp.dest(paths.testRoot));
+        .pipe(gulp.dest(paths.devRoot));
 });

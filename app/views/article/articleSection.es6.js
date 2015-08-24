@@ -27,11 +27,15 @@ export class ArticleSection extends Marionette.LayoutView {
         if (mediaContent && MediaFixture[mediaContent.id]) {
             switch(mediaContent.type) {
                 case 'carousel':
-                this.mediaContent.show(new Carousel({
-                    collection: new Backbone.Collection(MediaFixture[mediaContent.id])
-                }));
+                this._displayCarousel(MediaFixture[mediaContent.id]);
                 break;
             }
         }
+    }
+
+    _displayCarousel(data) {
+        this.mediaContent.show(new Carousel({
+            collection: new Backbone.Collection(data)
+        }));
     }
 }

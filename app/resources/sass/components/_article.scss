@@ -6,4 +6,10 @@ article {
     .date {
         color: #999;
     }
+
+    figure {
+        figcaption {
+            padding: $padding 0;
+        }
+    }
 }

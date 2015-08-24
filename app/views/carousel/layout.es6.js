@@ -15,19 +15,23 @@ export class Carousel extends Marionette.LayoutView {
         return 'carousel';
     }
 
-    initialize() {
+    initialize({timerInterval = 3000}) {
         this.template = Template;
+        this.timerInterval = timerInterval;
     }
 
     onRender() {
+        this._showCarouselNavigation();
+        this._selectImage();
+    }
+
+    _showCarouselNavigation() {
         this.navMenu = new NavigationMenu({
             collection: this.collection,
             onSelect: el => this._selectImage(el._index)
         });
 
         this.navigation.show(this.navMenu);
-
-        this._selectImage();
     }
 
     _selectImage(index = 0) {
@@ -41,8 +45,16 @@ export class Carousel extends Marionette.LayoutView {
     }
 
     _attachTimer(currentIndex) {
-        clearInterval(this.timer);
+        this._clearTimer();
         this.timer = setInterval(() =>
-            this._showMainImage(currentIndex >= this.collection.length - 1 ? currentIndex = 0 : currentIndex += 1), 3000);
+            this._showMainImage(currentIndex >= this.collection.length - 1 ? currentIndex = 0 : currentIndex += 1), this.timerInterval);
+    }
+
+    _clearTimer() {
+        clearInterval(this.timer);
+    }
+
+    onDestroy() {
+        this._clearTimer();
     }
 }

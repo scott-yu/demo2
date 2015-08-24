@@ -5,9 +5,7 @@ import {AppController} from 'controllers/appController';
 
 let app = new Marionette.Application();
 
-app.layout = new AppLayout({
-    el: '.x-app-main'
-});
+app.layout = new AppLayout({ el: '.x-app-main' });
 
 app.layout.render();
 
